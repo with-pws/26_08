@@ -4,15 +4,15 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="format-detection" content="telephone=no">
-<title>도요새편지 2026년 10월 29일 · (사)박원순혁신재단</title>
+<title>도요새편지 2026년 10월 6일 · (사)박원순혁신재단</title>
 
 <!-- 문자·카카오톡 등에서 링크를 공유할 때 보이는 미리보기 -->
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="박원순혁신재단">
-<meta property="og:title" content="도요새편지 &lt;03&gt; · 2026년 10월 29일">
-<meta property="og:description" content="사회혁신가 지원사업 경과와 회원의날 &lt;이야기 포트럭 파티&gt; 소식을 전합니다.">
-<meta property="og:url" content="https://with-pws.github.io/26.10/">
-<meta property="og:image" content="https://with-pws.github.io/26.10/cover.jpg">
+<meta property="og:title" content="도요새편지 &lt;02&gt; · 2026년 10월 6일">
+<meta property="og:description" content="공익법인 지정, 사회혁신가 공개모집, 회원의날 바자회 소식을 전합니다.">
+<meta property="og:url" content="https://with-pws.github.io/26_10/">
+<meta property="og:image" content="https://with-pws.github.io/26_10/poster.jpg">
 <meta property="og:image:alt" content="도요새편지 2026년 10월호 표지">
 <meta property="og:locale" content="ko_KR">
 <meta name="twitter:card" content="summary_large_image">
@@ -152,7 +152,6 @@
   .cover{
     position:relative;margin:0 0 34px;background:#000;
     aspect-ratio:1104/832;overflow:hidden;
-    border:1px solid var(--rule);   /* PC·모바일 공통 표지 테두리 */
   }
   .cover video{display:block;width:100%;height:100%;object-fit:cover}
   .cover__play{
@@ -192,7 +191,7 @@
   }
   .h-sub{
     font-family:var(--serif);font-weight:700;
-    font-size:1.62rem;margin:0 0 14px;line-height:1.5;
+    font-size:1.3rem;margin:0 0 10px;line-height:1.55;
   }
   .prose p{margin:0 0 1.05em;font-size:1rem;color:var(--ink)}
   .lead-list{list-style:none;margin:6px 0 0;padding:0;counter-reset:lead}
@@ -205,13 +204,9 @@
     font-family:var(--sans);font-weight:600;font-size:.95rem;color:var(--gold);
   }
   .prose p:last-child{margin-bottom:0}
-  /* 본문 속 작은 덧말 */
-  .pnote{font-size:.86em;color:var(--ink-soft)}
   .aside{font-size:.86rem;line-height:1.95;color:var(--ink-soft)}
   .aside p{margin:0 0 1em}
   .aside p:last-child{margin-bottom:0}
-  /* 본문과 같은 크기·색으로 읽히는 곁글 */
-  .aside--strong{font-size:1.06rem;color:var(--ink)}
 
   /* ---------- 목차 ---------- */
   .toc{border-top:1px solid var(--rule);margin-top:34px;padding-top:24px}
@@ -230,15 +225,7 @@
 
   /* ---------- 사진 ---------- */
   .photo{margin:0 0 30px}
-  .photo img{
-    display:block;
-    width:100%;
-    aspect-ratio:3/2; /* 사진의 가로세로 3:2 비율 유지 (모바일 대응) */
-    object-fit:cover; /* 검은 여백을 제거하고 사진으로 꽉 채움 */
-    object-position:center;
-  }
-  .photo--43 img{aspect-ratio:4/3}   /* 작은마켓 사진: 아래쪽을 더 보이게 */
-  .photo--free img{aspect-ratio:auto}  /* 원본 비율 그대로 (자르지 않음) */
+  .photo img{display:block;width:100%;height:auto}
   .photo figcaption{
     font-family:var(--sans);font-size:.72rem;color:var(--ink-faint);
     margin-top:8px;line-height:1.7;
@@ -260,22 +247,13 @@
   }
   .facts__v{font-size:.98rem;line-height:1.75}
   .facts__v small{display:block;font-size:.84rem;color:var(--ink-soft);margin-top:2px}
-  /* 항목 값과 같은 글꼴·크기의 보조 안내 줄 */
-  .facts__note{display:block;margin-top:6px}
-  /* 신청·문의 이메일: 누르면 메일 앱으로 */
-  .facts__mail{color:var(--ink);text-decoration:none;border-bottom:1px solid var(--gold)}
-  .facts__mail:hover{border-bottom-color:var(--ink)}
 
   /* ---------- 회원소식 블록 ---------- */
   .news{padding:26px 0;border-top:1px solid var(--rule)}
   .news:first-of-type{border-top:0;padding-top:0}
   .news__grid{display:grid;grid-template-columns:1.05fr 1fr;gap:34px;align-items:start}
   .callout{background:var(--wash);padding:22px 24px;border-left:4px solid var(--yellow)}
-  .callout--wide{margin-top:22px}
   .callout p{font-size:.9rem;line-height:1.9;margin:0;color:var(--ink)}
-  .callout .benefit__title{margin-bottom:12px}
-  .callout .lead-list li{margin-bottom:14px}
-  .callout .lead-list li:last-child{margin-bottom:0}
   .callout__list{list-style:none;margin:0;padding:0}
   .callout__list li{
     position:relative;padding-left:20px;
@@ -295,12 +273,6 @@
     border-bottom:1px solid var(--gold);
   }
   .callout__contact a:hover{color:var(--ink);border-bottom-color:var(--ink)}
-  /* 물품 후원 방법 아래 문의 번호 */
-  .callout__note{
-    margin:16px 0 0;padding-top:12px;border-top:1px solid rgba(221,166,0,.28);
-    font-family:var(--sans);font-size:.86rem;color:var(--ink-soft);
-  }
-  .callout__note a{color:var(--ink);text-decoration:none;border-bottom:1px solid var(--gold)}
   .rules{list-style:none;margin:14px 0 0;padding:0}
   .rules li{
     font-size:.92rem;color:var(--ink-soft);line-height:1.8;
@@ -451,56 +423,14 @@
   }
   .linkbtn:hover{background:#fcd260;transform:translateY(-1px)}
   .linkbtn:hover i{transform:translateX(3px)}
-  /* 큰 버튼 + 버튼 줄 */
-  .linkbtn--lg{font-size:1rem;padding:13px 22px;border-bottom-width:3px}
-  .btnrow{
-    display:flex;flex-wrap:wrap;gap:12px;
-    justify-content:center;margin-top:24px;
-  }
-  /* 공고문 이미지 (누르면 홈페이지로) */
-  .notice{
-    display:block;margin:26px auto 0;max-width:620px;
-    border:1px solid var(--rule);
-    transition:box-shadow .18s ease, transform .18s ease;
-  }
-  .notice img{display:block;width:100%;height:auto}
-  .notice:hover{box-shadow:0 8px 22px rgba(0,0,0,.14);transform:translateY(-2px)}
 
   /* PC에서는 4면 캠페인 문단만 오른쪽 끝을 맞춘다(양쪽 정렬) */
   @media (min-width:761px){
     .page:last-of-type .prose p{text-align:justify;text-align-last:left}
 
-    /* PC: 제목을 한 줄로 (모바일은 두 줄 유지) */
-    .br-mo{display:none}
-    .circle--flush{margin-left:0;margin-right:0}
-
-    /* PC: 곁글이 너무 작지 않도록 */
-    .aside{font-size:.95rem;line-height:1.9}
-    .aside--strong{font-size:1.1rem;line-height:1.9}
-    .split--even{grid-template-columns:1fr 1fr;gap:34px}
-
-    /* PC: 항목 표를 두 단으로 나눠 가로 공간을 채운다 */
-    .facts--2col{
-      display:grid;grid-template-columns:1fr 1fr;
-      column-gap:48px;position:relative;
-    }
-    /* 왼쪽 5개 항목, 오른쪽 나머지로 나눈다 */
-    .facts--split5{grid-auto-flow:column;grid-template-rows:repeat(5,auto)}
-
-    /* 두 단 사이 세로 구분선 */
-    .facts--2col::before{
-      content:"";position:absolute;top:0;bottom:0;left:50%;
-      width:1px;background:var(--rule);
-    }
-
-    /* PC: 물품 후원 방법 박스를 전체 폭으로, 항목은 두 단으로 */
-    .callout--wide{padding:24px 28px}
-    .callout--wide .lead-list{display:grid;grid-template-columns:1fr 1fr;gap:0 36px}
-    .callout--wide .lead-list li{margin-bottom:0}
-
-    /* PC에는 문자 앱이 없는 경우가 많으므로 문자 링크만 막는다 (이메일은 PC·모바일 모두 작동) */
-    .footer a[href^="sms:"],
-    .callout__contact a[href^="sms:"]{
+    /* PC에는 문자·메일 앱이 없는 경우가 많으므로 홈페이지 링크만 남긴다 */
+    .footer a[href^="sms:"], .footer a[href^="mailto:"],
+    .callout__contact a{
       pointer-events:none;cursor:default;
       color:inherit;border-bottom:0;
     }
@@ -596,97 +526,6 @@
     .h-lead{font-size:clamp(1.62rem,7.4vw,2rem);line-height:1.4;margin-bottom:22px}
     .h-lead--lg{font-size:clamp(1.82rem,8.4vw,2.35rem);}
   }
-
-  /* ---------- 진행 단계 (사회혁신가 경과) ---------- */
-  .steps{
-    list-style:none;margin:28px 0 0;padding:0;
-    display:grid;grid-template-columns:repeat(3,1fr);gap:0;
-    border-top:2px solid var(--ink);
-  }
-  .steps__item{
-    position:relative;padding:16px 16px 18px;
-    border-bottom:1px solid var(--rule);
-    display:flex;flex-direction:column;gap:2px;
-  }
-  .steps__item + .steps__item{border-left:1px solid var(--rule)}
-  .steps__k{font-family:var(--serif);font-weight:700;font-size:1.05rem;line-height:1.5}
-  .steps__v{font-family:var(--sans);font-size:.84rem;color:var(--ink-soft)}
-  .steps__s{
-    align-self:flex-start;margin-top:8px;
-    font-family:var(--sans);font-size:.72rem;font-weight:600;letter-spacing:.06em;
-    padding:2px 10px;border:1px solid var(--rule);color:var(--ink-faint);border-radius:999px;
-  }
-  .steps__item.is-done .steps__s{border-color:var(--ink-faint);color:var(--ink-soft)}
-  .steps__item.is-now{background:var(--wash)}
-  .steps__item.is-now .steps__s{background:var(--yellow);border-color:var(--yellow);color:#3d2e00}
-
-  /* ---------- 진행 순서 (리플릿 식순 디자인 참고) ---------- */
-  .program{
-    margin-top:34px;padding:26px 0 24px;
-    border-top:1px solid var(--gold);border-bottom:1px solid var(--gold);
-  }
-  .program__eyebrow{
-    display:block;text-align:center;
-    font-family:var(--sans);font-size:.72rem;font-weight:500;letter-spacing:.32em;
-    color:var(--gold);
-  }
-  .program__title{
-    text-align:center;margin:4px 0 24px;
-    font-family:var(--serif);font-weight:700;font-size:1.42rem;line-height:1.5;
-  }
-  .program__part + .program__part{margin-top:26px}
-  .program__bar{
-    display:grid;grid-template-columns:52px 1fr auto;align-items:baseline;gap:10px;
-    background:var(--wash);padding:5px 12px;
-  }
-  .program__no{font-family:var(--sans);font-weight:500;font-size:.92rem;color:var(--ink-soft)}
-  .program__name{font-family:var(--serif);font-weight:700;font-size:1.08rem}
-  .program__time{font-family:var(--sans);font-size:.92rem;color:var(--ink-soft);white-space:nowrap}
-  .program__list{list-style:none;margin:12px 0 0;padding:0 0 0 74px}
-  .program__list li{font-size:1rem;line-height:1.7;margin-bottom:10px}
-  .program__list li:last-child{margin-bottom:0}
-  .program__list small{
-    display:block;padding-left:4.2em;margin-top:1px;
-    font-family:var(--sans);font-size:.8rem;color:var(--ink-faint);line-height:1.6;
-  }
-
-  @media (max-width:760px){
-    .steps{grid-template-columns:1fr}
-    .steps__item{flex-direction:row;flex-wrap:wrap;align-items:center;column-gap:10px;padding:13px 4px}
-    .steps__item + .steps__item{border-left:0}
-    .steps__item.is-now{padding-left:12px;padding-right:12px}
-    .steps__s{margin:0 0 0 auto}
-    .steps__k{font-size:1rem;width:100%}
-
-    .program{padding:22px 0 20px}
-    .program__title{font-size:1.25rem;margin-bottom:20px}
-    .program__bar{grid-template-columns:40px 1fr auto;padding:5px 10px;gap:8px}
-    .program__no{font-size:.84rem}
-    .program__name{font-size:.98rem}
-    .program__time{font-size:.8rem}
-    .program__list{padding-left:20px}
-    .program__list li{font-size:.95rem}
-    .program__list small{padding-left:1.4em;font-size:.76rem}
-  }
-
-
-  /* 별표를 오른쪽 끝(> 위)으로 */
-  .mark--right::before{left:auto;right:-.42em}
-  .mark--right::after{left:auto;right:.36em}
-
-  /* 얇은 신청 버튼 */
-  .linkbtn--slim{font-size:.95rem;padding:9px 22px;border-bottom-width:2px}
-  @media (max-width:760px){ .linkbtn--slim{font-size:.9rem;padding:8px 18px} }
-
-  /* 표지 사진 (영상 대신) */
-  .cover--photo{background:none}
-  .cover--photo img{display:block;width:100%;height:100%;object-fit:cover;object-position:center}
-
-  .cover__tmp{height:0;margin:0;position:relative;top:-27px;line-height:1;text-align:right;font-family:var(--sans);font-size:.75rem;color:var(--ink-faint)}
-  @media (max-width:760px){ .cover__tmp{top:-27px} }
-
-  /* 별표 없는 사선 밑줄 */
-  .mark--nostar::before,.mark--nostar::after{display:none}
 </style>
 </head>
 <body>
@@ -694,8 +533,8 @@
 <!-- ============ 페이지 01 : 표지 ============ -->
 <article class="page">
   <div class="page__top">
-    <span class="page__no">&lt;도요새편지 03&gt;</span>
-    <span class="page__issue">2026년 10월 29일(목)</span>
+    <span class="page__no">&lt;도요새편지 02&gt;</span>
+    <span class="page__issue">2026년 10월 6일(화)</span>
   </div>
 
   <div class="page__body">
@@ -710,22 +549,24 @@
       </div>
     </div>
 
-    <!-- 표지 영상·사진 자리 (준비되면 2호처럼 .cover + video로 교체) -->
-    <figure class="cover cover--photo"><img src="cover.jpg" alt="회원의날 행사장에 띄운 '안녕? 원순씨!' 풍선"></figure>
-    <!-- 최종 사진 받으면 아래 한 줄 삭제 -->
-    <p class="cover__tmp">(임시)</p>
+    <!-- 표지 영상·사진 자리 (준비되면 cover.mp4 / poster.jpg 교체) -->
+    <div class="cover" id="cover">
+      <video id="coverVideo" poster="poster.jpg" autoplay muted playsinline webkit-playsinline disablepictureinpicture preload="auto"
+              aria-label="도요새편지 2026년 10월호 표지 영상">
+        <source src="cover.mp4" type="video/mp4">
+      </video>
+      <button class="cover__play" id="coverPlay" type="button"><span>영상 재생</span></button>
+      <button class="cover__sound" id="coverSound" type="button" aria-label="소리 켜기">소리 켜기</button>
+    </div>
 
     <section class="prose rise">
       <span class="eyebrow">여는 글</span>
-      <p>회원 여러분, 깊어가는 가을 평안하신지요.</p>
-
-      <p>갑자기 추워진 날씨에도 곧 여러분을 뵐 수 있다는 생각에 마음만은 따뜻합니다.</p>
-
-      <p>높아지는 하늘만큼 부풀어가는 희망을 담아, 10월 소식 전합니다.</p>
-
-      <ol class="lead-list" style="margin-top:20px">
-        <li><strong>사회혁신가 지원사업</strong> 경과 보고드립니다.</li>
-        <li><strong>11/14(토) 회원의날 &lt;이야기 포트럭 파티&gt;</strong>에 초대합니다.</li>
+      <p class="ph ph--text">인사말 자리입니다. 원고가 준비되면 이 문단을 교체해 주세요.</p>
+      <p>회원 여러분께 세 가지 소식을 전합니다.</p>
+      <ol class="lead-list">
+        <li>재단이 <strong>공익법인</strong>으로 지정되었습니다.</li>
+        <li><strong>사회혁신가</strong>를 공개모집합니다.</li>
+        <li>회원의날에 <strong>바자회</strong>가 열립니다.</li>
       </ol>
     </section>
 
@@ -735,40 +576,48 @@
   </div>
 </article>
 
-<!-- ============ 페이지 02 : 사회혁신가 지원사업 경과 ============ -->
+<!-- ============ 페이지 02 : 공익법인 지정 ============ -->
 <article class="page">
   <div class="page__top page__top--bare"></div>
 
   <div class="page__body">
-    <h2 class="h-lead"><span class="mark mark--nostar">사회혁신가 지원사업</span><br class="br-mo"> 경과 보고</h2>
+    <h2 class="h-lead">박원순혁신재단<br><span class="circle circle--flush">공익법인</span> 지정</h2>
 
     <section class="news">
-      <div class="prose">
-        <p>지난 10월 1일부터 10월 25일까지 진행한 <strong>사회혁신가 지원사업 공모</strong>에 많은 분들이 관심을 갖고 지원해 주셨습니다. <strong>지원해 주신 모든 분, 그리고 공모 소식을 주변에 알려 주신 회원 여러분께 감사드립니다.</strong></p>
-        <p>현재 심사를 진행 중이며, 선정된 분들의 활동이 다시 시민사회의 힘이 될 수 있도록 함께하겠습니다.</p>
-        <p><span class="hl">선정자 현황은 11월 14일 회원의날</span>에 직접 보고드리겠습니다.</p>
+      <div class="news__grid">
+        <div class="prose">
+          <p>이제 공식적 모금 활동이 가능하고, 후원해 주신 분들께 기부금영수증을 발급해 드릴 수 있습니다.</p>
+        </div>
+        <div>
+          <div class="facts">
+            <div class="facts__row"><div class="facts__k">지정일</div><div class="facts__v">2026년 9월 30일(수)</div></div>
+            <div class="facts__row"><div class="facts__k">달라지는 점</div><div class="facts__v"><span class="hl">후원금 기부금영수증 발급</span><small>공식 모금활동 가능</small></div></div>
+          </div>
+        </div>
       </div>
-
-      <!-- 진행 단계 -->
-      <ol class="steps">
-        <li class="steps__item is-done">
-          <span class="steps__k">공모 접수</span>
-          <span class="steps__v">10.1 ~ 10.25</span>
-          <span class="steps__s">마감</span>
-        </li>
-        <li class="steps__item is-now">
-          <span class="steps__k">심사</span>
-          <span class="steps__v">10.26 ~ 11.8</span>
-          <span class="steps__s">진행 중</span>
-        </li>
-        <li class="steps__item">
-          <span class="steps__k">선정자 보고</span>
-          <span class="steps__v">11.14(토) 회원의날</span>
-          <span class="steps__s">예정</span>
-        </li>
-      </ol>
     </section>
 
+    <div class="benefit">
+      <div class="benefit__box">
+        <h3 class="benefit__title">개인 후원자</h3>
+        <p>소득세법에 따라 기부금 <span class="ul">세액공제</span> 혜택을 받으실 수 있습니다.</p>
+        <ul class="rules">
+          <li>전자기부금영수증 발급</li>
+          <li>연말정산 시 세액공제 <strong>15%</strong> (1천만 원 초과분 <strong>30%</strong>)</li>
+        </ul>
+        <p class="benefit__note">※ 사업소득만 있는 분은 공제 대상에서 제외됩니다. 연말정산 대상 사업소득자는 포함됩니다.</p>
+      </div>
+      <div class="benefit__box">
+        <h3 class="benefit__title">기업·법인 후원자</h3>
+        <p>법인세법에 따라 기부금이 비용으로 인정되는 <span class="ul">손금산입</span> 혜택을 받으실 수 있습니다.</p>
+        <ul class="rules">
+          <li>전자기부금영수증 발급</li>
+          <li>법인세법에 따른 손금산입 가능</li>
+        </ul>
+      </div>
+    </div>
+
+    <p class="srcline">기부금 세액공제 자세히 보기 · <a href="https://www.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=239040" target="_blank" rel="noopener">국세청 안내</a></p>
 
     <div class="page__foot">
       <img src="logo.jpg" alt="도요새 로고" class="page__foot-logo">
@@ -777,77 +626,81 @@
   </div>
 </article>
 
-<!-- ============ 페이지 03 : 회원의날 진행계획 + 마감 ============ -->
+<!-- ============ 페이지 03 : 사회혁신가 공개모집 ============ -->
 <article class="page">
   <div class="page__top page__top--bare"></div>
 
   <div class="page__body">
-    <h2 class="h-lead"><span class="mark mark--right">2026 회원의날</span>에<br class="br-mo"> 초대합니다!</h2>
+    <h2 class="h-lead"><span class="mark">사회혁신가 지원사업</span><br>공개모집!</h2>
 
     <section class="news">
-      <div class="prose">
-        <p>새로운 출발을 함께해 주신 회원 여러분과 2026년을 갈무리하며, 한 해의 이야기와 희망을 나누는 자리를 마련했습니다. <span class="pnote">(이미지를 클릭하면 신청 페이지로 이동합니다)</span></p>
-      </div>
-      <!-- 신청 페이지 주소 받으면 href 교체 -->
-      <a class="notice" href="#신청페이지" target="_blank" rel="noopener">
-        <img src="webposter.jpg" alt="박원순혁신재단 2026 회원의날 이야기 포트럭 파티 웹자보 — 2026년 11월 14일(토) 15:00~18:00, 푸르메재단 4층, 작은마켓은 2시부터">
-      </a>
-      <div class="btnrow">
-        <a class="linkbtn linkbtn--slim" href="#신청페이지" target="_blank" rel="noopener">회원의날 참석 신청하기 <i>&rarr;</i></a>
+      <div class="news__grid">
+        <div class="prose">
+          <p>현장에서 사람과 사람을 잇고, 작은 현장을 바꾸며 후배와 동료를 늘려가는 활동가를 찾습니다. 관계로 문제를 해결하는 사람, 곧 <span class="hl">소셜디자이너</span>입니다.</p>
+          <ul class="rules">
+            <li>40~50대 활동가</li>
+            <li>활동 계획서를 바탕으로 선정합니다</li>
+            <li>지원금 사용 내역의 증빙은 요구하지 않습니다</li>
+          </ul>
+        </div>
+        <div>
+          <div class="facts">
+            <div class="facts__row"><div class="facts__k">모집 기간</div><div class="facts__v"><span class="hl">2026년 10월 1일(목) ~ 10월 31일(토)</span></div></div>
+            <div class="facts__row"><div class="facts__k">지원 인원</div><div class="facts__v">최대 5명</div></div>
+            <div class="facts__row"><div class="facts__k">지원 기간</div><div class="facts__v">12개월</div></div>
+            <div class="facts__row"><div class="facts__k">지원 금액</div><div class="facts__v">월 50만 원 · 총 600만 원</div></div>
+            <div class="facts__row"><div class="facts__k">신청 방법</div><div class="facts__v">본인 신청과 동료 추천 모두 가능</div></div>
+            <div class="facts__row"><div class="facts__k">신청 링크</div><div class="facts__v ph ph--inline">추후 안내</div></div>
+          </div>
+        </div>
       </div>
     </section>
 
+    <div class="page__foot">
+      <img src="logo.jpg" alt="도요새 로고" class="page__foot-logo">
+      <img src="logo.jpg" alt="도요새 로고" class="page__foot-logo">
+      <img src="logo.jpg" alt="도요새 로고" class="page__foot-logo">
+    </div>
+  </div>
+</article>
 
-    <!-- 진행 순서 (6주기 추도식 리플릿 식순 디자인 참고) -->
-    <section class="program">
-      <span class="program__eyebrow">PROGRAM</span>
-      <h3 class="program__title">회원의날 진행 순서</h3>
+<!-- ============ 페이지 04 : 회원의날 바자회 + 마감 ============ -->
+<article class="page">
+  <div class="page__top page__top--bare"></div>
 
-      <div class="program__part">
-        <div class="program__bar">
-          <span class="program__no">1부</span>
-          <span class="program__name">재단 한해살이 이야기</span>
-          <span class="program__time">15:00 — 15:45</span>
+  <div class="page__body">
+    <!-- 백자 작품 사진 자리 -->
+    <figure class="photo rise">
+      <img src="photo.jpg" alt="바자회에 출품될 백자 항아리와 그릇들">
+    </figure>
+
+    <h2 class="h-lead">회원의날<br>바자회 개최</h2>
+
+    <div class="split">
+      <div>
+        <div class="facts">
+          <div class="facts__row"><div class="facts__k">일시</div><div class="facts__v"><span class="hl">2026년 11월 14일(토) <br class="br-m">오후 3시 ~ 6시</span><small class="meal">회원의날 현장</small></div></div>
+          <div class="facts__row"><div class="facts__k">장소</div><div class="facts__v">푸르메재단 강당<small>서울시 종로구 자하문로 89, 4층</small></div></div>
+          <div class="facts__row"><div class="facts__k">출품</div><div class="facts__v">임화공 선생님의 백자 작품</div></div>
         </div>
-        <ul class="program__list">
-          <li>사전 영상</li>
-          <li>참석자 소개</li>
-          <li>환영 인사 — 이사장</li>
-          <li>활동 보고 — 사무처장</li>
-          <li>특별 보고 — 상임이사</li>
-          <li>특별 감사 — 이사장</li>
+      </div>
+      <div class="aside">
+        <p>임화공 선생님은 우리나라 화예 강사 제1호로, 1958년 첫 화예전을 연 이래 60여 년간 한국의 꽃 예술을 세계에 알려 오셨습니다. 2006년에는 민간 문화외교에 기여한 공로로 수교훈장 숭례장을 받으셨습니다.</p>
+        <p>이번 회원의날에 선생님의 백자 작품을 내주셨습니다.</p>
+        <p class="srcline"><a href="https://www.whaon.co.kr/17" target="_blank" rel="noopener">임화공 선생님 소개 보기</a></p>
+      </div>
+    </div>
+
+    <section class="news rise" style="margin-top:34px">
+      <div class="callout">
+        <ul class="callout__list">
+          <li>회원 여러분의 참여가 박원순의 가치를 널리 확산하는 토대가 됩니다.</li>
+          <li>연락처가 바뀌었다면 사무처로 알려주세요.
+            <span class="callout__contact">(문자메시지 <a href="sms:+821073970109">010-7397-0109</a> · 이메일 <a href="mailto:sojang@parkwonsoon.org">sojang@parkwonsoon.org</a>)</span>
+          </li>
         </ul>
       </div>
-
-      <div class="program__part">
-        <div class="program__bar">
-          <span class="program__no">2부</span>
-          <span class="program__name">회원 이야기 포트럭 파티</span>
-          <span class="program__time">16:00 — 18:00</span>
-        </div>
-        <ul class="program__list">
-          <li>축하 공연</li>
-          <li>퀴즈 — 십자말풀이</li>
-          <li>이야기 나눔</li>
-          <li>물품 경매 + 경품 추첨</li>
-          <li>식사와 친교의 시간</li>
-        </ul>
-      </div>
-
-      <div class="program__part">
-        <div class="program__bar">
-          <span class="program__no">부대</span>
-          <span class="program__name">작은마켓</span>
-          <span class="program__time">14:00 —</span>
-        </div>
-        <ul class="program__list">
-          <li>회원들이 기부한 물품 판매</li>
-        </ul>
-      </div>
-    </section>
-
-    <section class="news rise" style="margin-top:34px;border-top:0;padding-top:0">
-      <div class="give" style="margin-top:0">
+      <div class="give">
         <a class="give__btn" href="https://online.mrm.or.kr/IvNbY4b" target="_blank" rel="noopener">박원순혁신재단 후원하기 <i>&rarr;</i></a>
       </div>
       <div class="footer">
@@ -859,6 +712,7 @@
     </section>
 
     <div class="page__foot">
+      <img src="logo.jpg" alt="도요새 로고" class="page__foot-logo">
       <img src="logo.jpg" alt="도요새 로고" class="page__foot-logo">
       <img src="logo.jpg" alt="도요새 로고" class="page__foot-logo">
       <img src="logo.jpg" alt="도요새 로고" class="page__foot-logo">
