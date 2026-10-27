@@ -4,18 +4,16 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="format-detection" content="telephone=no">
-<title>도요새편지 2026년 8월 26일 · (사)박원순혁신재단</title>
+<title>도요새편지 2026년 10월 29일 · (사)박원순혁신재단</title>
 
 <!-- 문자·카카오톡 등에서 링크를 공유할 때 보이는 미리보기 -->
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="박원순혁신재단">
-<meta property="og:title" content="도요새편지 &lt;01&gt; · 2026년 8월 26일">
-<meta property="og:description" content="박원순혁신재단 회원 여러분께 보내드리는 첫 소식지입니다. 책읽기 소모임 모집, 2026 회원의날 안내, 회원확대 캠페인 결과를 전합니다.">
-<meta property="og:url" content="https://with-pws.github.io/26_08/">
-<meta property="og:image" content="https://with-pws.github.io/26_08/poster.jpg">
-<meta property="og:image:width" content="1104">
-<meta property="og:image:height" content="832">
-<meta property="og:image:alt" content="나뭇잎 모자를 쓰고 활짝 웃는 박원순">
+<meta property="og:title" content="도요새편지 &lt;03&gt; · 2026년 10월 29일">
+<meta property="og:description" content="사회혁신가 지원사업 경과와 회원의날 &lt;이야기 포트럭 파티&gt; 소식을 전합니다.">
+<meta property="og:url" content="https://with-pws.github.io/26.10/">
+<meta property="og:image" content="https://with-pws.github.io/26.10/cover.jpg">
+<meta property="og:image:alt" content="도요새편지 2026년 10월호 표지">
 <meta property="og:locale" content="ko_KR">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -151,8 +149,12 @@
   }
 
   /* ---------- 표지 영상 ---------- */
-  .cover{position:relative;margin:0 0 34px;background:#000}
-  .cover video{display:block;width:100%;height:auto}
+  .cover{
+    position:relative;margin:0 0 34px;background:#000;
+    aspect-ratio:1104/832;overflow:hidden;
+    border:1px solid var(--rule);   /* PC·모바일 공통 표지 테두리 */
+  }
+  .cover video{display:block;width:100%;height:100%;object-fit:cover}
   .cover__play{
     position:absolute;inset:0;display:none;
     align-items:center;justify-content:center;
@@ -163,6 +165,13 @@
     background:#fff;color:var(--ink);border-radius:999px;padding:10px 22px;
   }
   .cover.is-paused .cover__play{display:flex}
+  .cover__sound{
+    position:absolute;left:12px;top:12px;
+    font-family:var(--sans);font-size:.72rem;font-weight:500;
+    background:rgba(20,18,14,.55);color:#fff;border:0;border-radius:999px;
+    padding:7px 14px;cursor:pointer;backdrop-filter:blur(2px);
+  }
+  .cover__sound:hover{background:rgba(20,18,14,.75)}
 
   /* ---------- 공통 타이포 ---------- */
   .eyebrow{
@@ -183,7 +192,7 @@
   }
   .h-sub{
     font-family:var(--serif);font-weight:700;
-    font-size:1.3rem;margin:0 0 10px;line-height:1.55;
+    font-size:1.62rem;margin:0 0 14px;line-height:1.5;
   }
   .prose p{margin:0 0 1.05em;font-size:1rem;color:var(--ink)}
   .lead-list{list-style:none;margin:6px 0 0;padding:0;counter-reset:lead}
@@ -196,9 +205,13 @@
     font-family:var(--sans);font-weight:600;font-size:.95rem;color:var(--gold);
   }
   .prose p:last-child{margin-bottom:0}
+  /* 본문 속 작은 덧말 */
+  .pnote{font-size:.86em;color:var(--ink-soft)}
   .aside{font-size:.86rem;line-height:1.95;color:var(--ink-soft)}
   .aside p{margin:0 0 1em}
   .aside p:last-child{margin-bottom:0}
+  /* 본문과 같은 크기·색으로 읽히는 곁글 */
+  .aside--strong{font-size:1.06rem;color:var(--ink)}
 
   /* ---------- 목차 ---------- */
   .toc{border-top:1px solid var(--rule);margin-top:34px;padding-top:24px}
@@ -217,15 +230,23 @@
 
   /* ---------- 사진 ---------- */
   .photo{margin:0 0 30px}
-  .photo img{display:block;width:100%;height:auto}
+  .photo img{
+    display:block;
+    width:100%;
+    aspect-ratio:3/2; /* 사진의 가로세로 3:2 비율 유지 (모바일 대응) */
+    object-fit:cover; /* 검은 여백을 제거하고 사진으로 꽉 채움 */
+    object-position:center;
+  }
+  .photo--43 img{aspect-ratio:4/3}   /* 작은마켓 사진: 아래쪽을 더 보이게 */
+  .photo--free img{aspect-ratio:auto}  /* 원본 비율 그대로 (자르지 않음) */
   .photo figcaption{
     font-family:var(--sans);font-size:.72rem;color:var(--ink-faint);
     margin-top:8px;line-height:1.7;
   }
 
   /* ---------- 2단 조합 ---------- */
-  .split{display:grid;grid-template-columns:1.45fr 1fr;gap:38px;align-items:start}
-  .split .aside{padding-top:62px}
+  .split{display:grid;grid-template-columns:1.25fr 1fr;gap:38px;align-items:start}
+  .split .aside{padding-top:4px}
 
   /* ---------- 정보 리스트 ---------- */
   .facts{margin:0;border-top:2px solid var(--ink);padding-top:4px}
@@ -239,13 +260,22 @@
   }
   .facts__v{font-size:.98rem;line-height:1.75}
   .facts__v small{display:block;font-size:.84rem;color:var(--ink-soft);margin-top:2px}
+  /* 항목 값과 같은 글꼴·크기의 보조 안내 줄 */
+  .facts__note{display:block;margin-top:6px}
+  /* 신청·문의 이메일: 누르면 메일 앱으로 */
+  .facts__mail{color:var(--ink);text-decoration:none;border-bottom:1px solid var(--gold)}
+  .facts__mail:hover{border-bottom-color:var(--ink)}
 
   /* ---------- 회원소식 블록 ---------- */
   .news{padding:26px 0;border-top:1px solid var(--rule)}
   .news:first-of-type{border-top:0;padding-top:0}
-  .news__grid{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:start}
+  .news__grid{display:grid;grid-template-columns:1.05fr 1fr;gap:34px;align-items:start}
   .callout{background:var(--wash);padding:22px 24px;border-left:4px solid var(--yellow)}
+  .callout--wide{margin-top:22px}
   .callout p{font-size:.9rem;line-height:1.9;margin:0;color:var(--ink)}
+  .callout .benefit__title{margin-bottom:12px}
+  .callout .lead-list li{margin-bottom:14px}
+  .callout .lead-list li:last-child{margin-bottom:0}
   .callout__list{list-style:none;margin:0;padding:0}
   .callout__list li{
     position:relative;padding-left:20px;
@@ -265,9 +295,15 @@
     border-bottom:1px solid var(--gold);
   }
   .callout__contact a:hover{color:var(--ink);border-bottom-color:var(--ink)}
+  /* 물품 후원 방법 아래 문의 번호 */
+  .callout__note{
+    margin:16px 0 0;padding-top:12px;border-top:1px solid rgba(221,166,0,.28);
+    font-family:var(--sans);font-size:.86rem;color:var(--ink-soft);
+  }
+  .callout__note a{color:var(--ink);text-decoration:none;border-bottom:1px solid var(--gold)}
   .rules{list-style:none;margin:14px 0 0;padding:0}
   .rules li{
-    font-size:.86rem;color:var(--ink-soft);line-height:1.75;
+    font-size:.92rem;color:var(--ink-soft);line-height:1.8;
     padding-left:16px;position:relative;margin-bottom:6px;
   }
   .rules li::before{
@@ -338,6 +374,63 @@
     background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 92' preserveAspectRatio='none'><path d='M143 9 C 100 1, 46 6, 24 27 C 5 46, 24 74, 70 83 C 118 91, 172 79, 185 57 C 194 41, 180 23, 152 14' fill='none' stroke='%23dda600' stroke-width='4' stroke-linecap='round'/></svg>");
   }
 
+  /* 손그림 별표 + 사선 밑줄 강조 */
+  .mark{
+    position:relative;display:inline-block;
+    background-repeat:no-repeat;
+    background-position:0 100%;
+    background-size:100% .32em;
+    padding-bottom:.18em;
+    background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 22' preserveAspectRatio='none'><path d='M3 18 C 60 15, 140 10, 197 4' fill='none' stroke='%23dda600' stroke-width='5' stroke-linecap='round'/><path d='M14 21 C 70 18, 150 13, 193 9' fill='none' stroke='%23dda600' stroke-width='3' stroke-linecap='round' opacity='.75'/></svg>");
+  }
+  .mark::after{
+    content:"";position:absolute;
+    left:.30em;top:-.56em;width:.34em;height:.34em;
+    background-repeat:no-repeat;background-size:contain;
+    background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-6 -8 112 112'><g transform='rotate(14 50 50)'><path d='M 47.0 -1.6 Q 53.0 0.9 49.7 6.4 Q 65.0 45.6 75.9 86.2 Q 39.6 66.3 9.1 38.5 Q 52.0 41.0 94.8 36.2 Q 57.1 59.0 21.9 85.7 Q 30.6 44.2 49.7 6.4 L 56.5 27.2' fill='none' stroke='%23dda600' stroke-width='10' stroke-linecap='round' stroke-linejoin='round'/></g></svg>");
+  }
+  .mark::before{
+    content:"";position:absolute;
+    left:-.32em;top:-.40em;width:.76em;height:.76em;
+    background-repeat:no-repeat;background-size:contain;
+    background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-6 -8 112 112'><g transform='rotate(-10 50 50)'><path d='M 46.0 -4.6 Q 52.3 -2.1 48.8 3.6 Q 67.1 42.5 76.1 84.7 Q 40.0 61.0 4.9 35.9 Q 49.0 38.6 92.9 33.4 Q 59.6 63.2 21.0 85.6 Q 31.8 43.5 48.8 3.6 L 55.9 24.6' fill='none' stroke='%23dda600' stroke-width='6.5' stroke-linecap='round' stroke-linejoin='round'/></g></svg>");
+  }
+
+  /* 손으로 그린 따옴표 + 밑줄 강조 */
+  .q{
+    display:inline-block;vertical-align:top;
+    width:.44em;height:.44em;
+    background-repeat:no-repeat;background-size:contain;background-position:center;
+  }
+  .q--o{margin-right:.02em;
+    background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'><path d='M15 9 C 9 13, 6 20, 8 27' fill='none' stroke='%23dda600' stroke-width='4.5' stroke-linecap='round'/><path d='M31 8 C 25 13, 22 19, 24 27' fill='none' stroke='%23dda600' stroke-width='4.5' stroke-linecap='round'/></svg>");
+  }
+  /* 줄 첫머리에 올 때 글줄 왼쪽 맞춤 */
+  .q--flush{margin-left:-.46em}
+  .q--c{margin-left:.04em;
+    background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'><g transform='rotate(180 20 20)'><path d='M15 9 C 9 13, 6 20, 8 27' fill='none' stroke='%23dda600' stroke-width='4.5' stroke-linecap='round'/><path d='M31 8 C 25 13, 22 19, 24 27' fill='none' stroke='%23dda600' stroke-width='4.5' stroke-linecap='round'/></g></svg>");
+  }
+
+  .uline{
+    text-decoration:underline;
+    text-decoration-color:var(--gold);
+    text-decoration-thickness:.07em;
+    text-underline-offset:.18em;
+    text-decoration-skip-ink:none;
+  }
+
+  /* 물결 밑줄 */
+  .wave{
+    background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='8' viewBox='0 0 24 8'><path d='M0 5 Q 3 1, 6 5 T 12 5 T 18 5 T 24 5' fill='none' stroke='%23dda600' stroke-width='2' stroke-linecap='round'/></svg>");
+    background-repeat:repeat-x;
+    background-position:0 calc(100% - .13em);
+    background-size:.58em .2em;
+    padding-bottom:0;
+  }
+
+  /* 줄 첫머리에 올 때 글줄 왼쪽을 맞춘다 */
+  .circle--flush{margin-left:-.38em;margin-right:-.2em}
+
   .ul{
     text-decoration:underline;text-decoration-color:var(--gold);
     text-decoration-thickness:2px;text-underline-offset:4px;
@@ -358,18 +451,110 @@
   }
   .linkbtn:hover{background:#fcd260;transform:translateY(-1px)}
   .linkbtn:hover i{transform:translateX(3px)}
+  /* 큰 버튼 + 버튼 줄 */
+  .linkbtn--lg{font-size:1rem;padding:13px 22px;border-bottom-width:3px}
+  .btnrow{
+    display:flex;flex-wrap:wrap;gap:12px;
+    justify-content:center;margin-top:24px;
+  }
+  /* 공고문 이미지 (누르면 홈페이지로) */
+  .notice{
+    display:block;margin:26px auto 0;max-width:620px;
+    border:1px solid var(--rule);
+    transition:box-shadow .18s ease, transform .18s ease;
+  }
+  .notice img{display:block;width:100%;height:auto}
+  .notice:hover{box-shadow:0 8px 22px rgba(0,0,0,.14);transform:translateY(-2px)}
 
   /* PC에서는 4면 캠페인 문단만 오른쪽 끝을 맞춘다(양쪽 정렬) */
   @media (min-width:761px){
     .page:last-of-type .prose p{text-align:justify;text-align-last:left}
 
-    /* PC에는 문자·메일 앱이 없는 경우가 많으므로 홈페이지 링크만 남긴다 */
-    .footer a[href^="sms:"], .footer a[href^="mailto:"],
-    .callout__contact a{
+    /* PC: 제목을 한 줄로 (모바일은 두 줄 유지) */
+    .br-mo{display:none}
+    .circle--flush{margin-left:0;margin-right:0}
+
+    /* PC: 곁글이 너무 작지 않도록 */
+    .aside{font-size:.95rem;line-height:1.9}
+    .aside--strong{font-size:1.1rem;line-height:1.9}
+    .split--even{grid-template-columns:1fr 1fr;gap:34px}
+
+    /* PC: 항목 표를 두 단으로 나눠 가로 공간을 채운다 */
+    .facts--2col{
+      display:grid;grid-template-columns:1fr 1fr;
+      column-gap:48px;position:relative;
+    }
+    /* 왼쪽 5개 항목, 오른쪽 나머지로 나눈다 */
+    .facts--split5{grid-auto-flow:column;grid-template-rows:repeat(5,auto)}
+
+    /* 두 단 사이 세로 구분선 */
+    .facts--2col::before{
+      content:"";position:absolute;top:0;bottom:0;left:50%;
+      width:1px;background:var(--rule);
+    }
+
+    /* PC: 물품 후원 방법 박스를 전체 폭으로, 항목은 두 단으로 */
+    .callout--wide{padding:24px 28px}
+    .callout--wide .lead-list{display:grid;grid-template-columns:1fr 1fr;gap:0 36px}
+    .callout--wide .lead-list li{margin-bottom:0}
+
+    /* PC에는 문자 앱이 없는 경우가 많으므로 문자 링크만 막는다 (이메일은 PC·모바일 모두 작동) */
+    .footer a[href^="sms:"],
+    .callout__contact a[href^="sms:"]{
       pointer-events:none;cursor:default;
       color:inherit;border-bottom:0;
     }
   }
+
+
+  /* ---------- 준비 중 자리표시 ---------- */
+  .ph{
+    font-family:var(--sans);font-size:.84rem;color:var(--ink-faint);
+    background:repeating-linear-gradient(45deg,#faf9f6,#faf9f6 10px,#f4f2ec 10px,#f4f2ec 20px);
+    border:1px dashed var(--rule);
+  }
+  .ph--cover{
+    display:flex;align-items:center;justify-content:center;
+    aspect-ratio:4/3;margin:0 0 34px;letter-spacing:.04em;
+  }
+  .ph--photo{
+    display:flex;align-items:center;justify-content:center;
+    aspect-ratio:3/2;margin:0 0 30px;letter-spacing:.04em;
+  }
+  .ph--text{padding:14px 16px}
+  .ph--inline{
+    display:inline-block;padding:2px 10px;font-size:.86rem;
+    background:none;border:1px dashed var(--rule);
+  }
+
+  /* ---------- 후원자 혜택 2단 ---------- */
+  .benefit{
+    display:grid;grid-template-columns:1fr 1fr;gap:22px;
+    margin-top:30px;
+  }
+  .benefit__box{
+    background:var(--wash);padding:22px 24px;border-left:4px solid var(--yellow);
+  }
+  .benefit__title{
+    font-family:var(--serif);font-weight:700;font-size:1.12rem;
+    margin:0 0 8px;line-height:1.5;
+  }
+  .benefit__box p{margin:0;font-size:.92rem;line-height:1.85;color:var(--ink)}
+  .benefit__box .rules{margin-top:10px}
+  .benefit__box .benefit__note{
+    font-family:var(--sans);font-size:.68rem;font-weight:300;
+    line-height:1.7;letter-spacing:-.01em;
+    color:#a6a399;margin:12px 0 0;
+  }
+  .benefit__box .rules li{color:var(--ink-soft)}
+
+  /* ---------- 출처 링크 줄 ---------- */
+  .srcline{
+    font-family:var(--sans);font-size:.8rem;color:var(--ink-faint);
+    margin:18px 0 0;
+  }
+  .srcline a{color:var(--ink-soft);text-decoration:none;border-bottom:1px solid var(--yellow)}
+  .srcline a:hover{color:var(--ink);border-bottom-color:var(--ink)}
 
   /* ---------- 반응형 ---------- */
   @media (max-width:760px){
@@ -385,6 +570,14 @@
     .masthead__bridge{display:none}
     .masthead__meta{border-left:1px solid var(--rule);padding-left:14px;flex:0 0 auto;padding-bottom:2px;}
     .masthead__logo{height:81px;}
+
+    .benefit{grid-template-columns:1fr;gap:16px;margin-top:24px}
+    .benefit__box{padding:18px 18px}
+    .benefit__title{font-size:1.05rem}
+    .benefit__box p{font-size:.88rem}
+    .benefit__box .benefit__note{font-size:.64rem}
+    .srcline{font-size:.76rem}
+    .ph{font-size:.78rem}
 
     .page__top{margin-bottom:24px;}
     .page__top--bare{min-height:34px}
@@ -403,6 +596,97 @@
     .h-lead{font-size:clamp(1.62rem,7.4vw,2rem);line-height:1.4;margin-bottom:22px}
     .h-lead--lg{font-size:clamp(1.82rem,8.4vw,2.35rem);}
   }
+
+  /* ---------- 진행 단계 (사회혁신가 경과) ---------- */
+  .steps{
+    list-style:none;margin:28px 0 0;padding:0;
+    display:grid;grid-template-columns:repeat(3,1fr);gap:0;
+    border-top:2px solid var(--ink);
+  }
+  .steps__item{
+    position:relative;padding:16px 16px 18px;
+    border-bottom:1px solid var(--rule);
+    display:flex;flex-direction:column;gap:2px;
+  }
+  .steps__item + .steps__item{border-left:1px solid var(--rule)}
+  .steps__k{font-family:var(--serif);font-weight:700;font-size:1.05rem;line-height:1.5}
+  .steps__v{font-family:var(--sans);font-size:.84rem;color:var(--ink-soft)}
+  .steps__s{
+    align-self:flex-start;margin-top:8px;
+    font-family:var(--sans);font-size:.72rem;font-weight:600;letter-spacing:.06em;
+    padding:2px 10px;border:1px solid var(--rule);color:var(--ink-faint);border-radius:999px;
+  }
+  .steps__item.is-done .steps__s{border-color:var(--ink-faint);color:var(--ink-soft)}
+  .steps__item.is-now{background:var(--wash)}
+  .steps__item.is-now .steps__s{background:var(--yellow);border-color:var(--yellow);color:#3d2e00}
+
+  /* ---------- 진행 순서 (리플릿 식순 디자인 참고) ---------- */
+  .program{
+    margin-top:34px;padding:26px 0 24px;
+    border-top:1px solid var(--gold);border-bottom:1px solid var(--gold);
+  }
+  .program__eyebrow{
+    display:block;text-align:center;
+    font-family:var(--sans);font-size:.72rem;font-weight:500;letter-spacing:.32em;
+    color:var(--gold);
+  }
+  .program__title{
+    text-align:center;margin:4px 0 24px;
+    font-family:var(--serif);font-weight:700;font-size:1.42rem;line-height:1.5;
+  }
+  .program__part + .program__part{margin-top:26px}
+  .program__bar{
+    display:grid;grid-template-columns:52px 1fr auto;align-items:baseline;gap:10px;
+    background:var(--wash);padding:5px 12px;
+  }
+  .program__no{font-family:var(--sans);font-weight:500;font-size:.92rem;color:var(--ink-soft)}
+  .program__name{font-family:var(--serif);font-weight:700;font-size:1.08rem}
+  .program__time{font-family:var(--sans);font-size:.92rem;color:var(--ink-soft);white-space:nowrap}
+  .program__list{list-style:none;margin:12px 0 0;padding:0 0 0 74px}
+  .program__list li{font-size:1rem;line-height:1.7;margin-bottom:10px}
+  .program__list li:last-child{margin-bottom:0}
+  .program__list small{
+    display:block;padding-left:4.2em;margin-top:1px;
+    font-family:var(--sans);font-size:.8rem;color:var(--ink-faint);line-height:1.6;
+  }
+
+  @media (max-width:760px){
+    .steps{grid-template-columns:1fr}
+    .steps__item{flex-direction:row;flex-wrap:wrap;align-items:center;column-gap:10px;padding:13px 4px}
+    .steps__item + .steps__item{border-left:0}
+    .steps__item.is-now{padding-left:12px;padding-right:12px}
+    .steps__s{margin:0 0 0 auto}
+    .steps__k{font-size:1rem;width:100%}
+
+    .program{padding:22px 0 20px}
+    .program__title{font-size:1.25rem;margin-bottom:20px}
+    .program__bar{grid-template-columns:40px 1fr auto;padding:5px 10px;gap:8px}
+    .program__no{font-size:.84rem}
+    .program__name{font-size:.98rem}
+    .program__time{font-size:.8rem}
+    .program__list{padding-left:20px}
+    .program__list li{font-size:.95rem}
+    .program__list small{padding-left:1.4em;font-size:.76rem}
+  }
+
+
+  /* 별표를 오른쪽 끝(> 위)으로 */
+  .mark--right::before{left:auto;right:-.42em}
+  .mark--right::after{left:auto;right:.36em}
+
+  /* 얇은 신청 버튼 */
+  .linkbtn--slim{font-size:.95rem;padding:9px 22px;border-bottom-width:2px}
+  @media (max-width:760px){ .linkbtn--slim{font-size:.9rem;padding:8px 18px} }
+
+  /* 표지 사진 (영상 대신) */
+  .cover--photo{background:none}
+  .cover--photo img{display:block;width:100%;height:100%;object-fit:cover;object-position:center}
+
+  .cover__tmp{height:0;margin:0;position:relative;top:-27px;line-height:1;text-align:right;font-family:var(--sans);font-size:.75rem;color:var(--ink-faint)}
+  @media (max-width:760px){ .cover__tmp{top:-27px} }
+
+  /* 별표 없는 사선 밑줄 */
+  .mark--nostar::before,.mark--nostar::after{display:none}
 </style>
 </head>
 <body>
@@ -410,8 +694,8 @@
 <!-- ============ 페이지 01 : 표지 ============ -->
 <article class="page">
   <div class="page__top">
-    <span class="page__no">&lt;도요새편지 01&gt;</span>
-    <span class="page__issue">2026년 8월 26일(수)</span>
+    <span class="page__no">&lt;도요새편지 03&gt;</span>
+    <span class="page__issue">2026년 10월 29일(목)</span>
   </div>
 
   <div class="page__body">
@@ -426,143 +710,162 @@
       </div>
     </div>
 
-    <div class="cover" id="cover">
-      <video id="coverVideo" poster="poster.jpg" autoplay muted playsinline webkit-playsinline disablepictureinpicture preload="auto"
-              aria-label="도요새편지 2026년 8월호 표지 영상">
-        <source src="cover.mp4" type="video/mp4">
-      </video>
-      <button class="cover__play" id="coverPlay" type="button"><span>영상 재생</span></button>
-    </div>
+    <!-- 표지 영상·사진 자리 (준비되면 2호처럼 .cover + video로 교체) -->
+    <figure class="cover cover--photo"><img src="cover.jpg" alt="회원의날 행사장에 띄운 '안녕? 원순씨!' 풍선"></figure>
+    <!-- 최종 사진 받으면 아래 한 줄 삭제 -->
+    <p class="cover__tmp">(임시)</p>
 
     <section class="prose rise">
-      <span class="eyebrow">첫 인사</span>
-      <p>안녕하세요. 박원순혁신재단 회원 여러분께 보내드리는 첫 소식지입니다.</p>
-      <p>첫 인사를 어떻게 열까 고민하다가, 기존의 사진을 바탕으로 AI를 활용해 원순씨가 활짝 웃는 모습을 만들어 보았습니다. 원순씨의 시원한 웃음이 무더위를 조금은 식혀주는 것 같지 않으신가요?</p>
-      <p>회원 여러분 모두의 건강을 기원하며, 소식 전합니다.</p>
-      <ol class="lead-list">
-        <li><strong>회원 소모임</strong>을 모집합니다.</li>
-        <li>11월 14일, <strong>'회원의날'</strong> 행사를 알립니다.</li>
-        <li>회원확대 캠페인 결과를 보고드립니다.</li>
+      <span class="eyebrow">여는 글</span>
+      <p>회원 여러분, 깊어가는 가을 평안하신지요.</p>
+
+      <p>갑자기 추워진 날씨에도 곧 여러분을 뵐 수 있다는 생각에 마음만은 따뜻합니다.</p>
+
+      <p>높아지는 하늘만큼 부풀어가는 희망을 담아, 10월 소식 전합니다.</p>
+
+      <ol class="lead-list" style="margin-top:20px">
+        <li><strong>사회혁신가 지원사업</strong> 경과 보고드립니다.</li>
+        <li><strong>11/14(토) 회원의날 &lt;이야기 포트럭 파티&gt;</strong>에 초대합니다.</li>
       </ol>
     </section>
 
-    <!-- 1페이지 하단 로고 1개 배치 -->
     <div class="page__foot">
       <img src="logo.jpg" alt="도요새 로고" class="page__foot-logo">
     </div>
   </div>
 </article>
 
-<!-- ============ 페이지 02 : 재단 소식 - 책읽기 소모임 ============ -->
+<!-- ============ 페이지 02 : 사회혁신가 지원사업 경과 ============ -->
 <article class="page">
   <div class="page__top page__top--bare"></div>
 
   <div class="page__body">
-    <h2 class="h-lead">책읽기 소모임<br>선착순 10명 모집!</h2>
+    <h2 class="h-lead"><span class="mark mark--nostar">사회혁신가 지원사업</span><br class="br-mo"> 경과 보고</h2>
 
     <section class="news">
-      <div class="news__grid">
-        <div class="prose">
-          <p>박원순의 저서와 기고문, 연설문을 함께 읽고 오늘의 관점에서 다시 해석하는 모임입니다. 모임에서 나눈 내용은 기록해 사회와 나눕니다.</p>
-          <ul class="rules">
-            <li>모임 활성화를 위해 약간의 <span class="ul">지원금</span> 지급!!</li>
-            <li>정기 모임 장소는 재단 사무실 이용</li>
-            <li>읽을거리, 모임 주기 등 모든 것은 구성원이 결정/운영합니다.</li>
-            <li>신청 완료되신 분들께 9월 9일에 연락드리겠습니다.</li>
-          </ul>
-        </div>
-        <div>
-          <div class="facts">
-            <div class="facts__row"><div class="facts__k">모집 기간</div><div class="facts__v">2026년 8월 26일(수) ~ 9월 8일(화)</div></div>
-            <div class="facts__row"><div class="facts__k">모집 인원</div><div class="facts__v"><span class="hl">10명 (선착순)</span></div></div>
-            <div class="facts__row"><div class="facts__k">활동 기간</div><div class="facts__v">2026년 9월 ~ 2027년 2월</div></div>
-            <div class="facts__row"><div class="facts__k">신청 방법</div><div class="facts__v"><a class="linkbtn" href="https://naver.me/GmpmaRAt" target="_blank" rel="noopener">소모임 신청하기 <i>&rarr;</i></a></div></div>
-          </div>
-        </div>
+      <div class="prose">
+        <p>지난 10월 1일부터 10월 25일까지 진행한 <strong>사회혁신가 지원사업 공모</strong>에 많은 분들이 관심을 갖고 지원해 주셨습니다. <strong>지원해 주신 모든 분, 그리고 공모 소식을 주변에 알려 주신 회원 여러분께 감사드립니다.</strong></p>
+        <p>현재 심사를 진행 중이며, 선정된 분들의 활동이 다시 시민사회의 힘이 될 수 있도록 함께하겠습니다.</p>
+        <p><span class="hl">선정자 현황은 11월 14일 회원의날</span>에 직접 보고드리겠습니다.</p>
+      </div>
+
+      <!-- 진행 단계 -->
+      <ol class="steps">
+        <li class="steps__item is-done">
+          <span class="steps__k">공모 접수</span>
+          <span class="steps__v">10.1 ~ 10.25</span>
+          <span class="steps__s">마감</span>
+        </li>
+        <li class="steps__item is-now">
+          <span class="steps__k">심사</span>
+          <span class="steps__v">10.26 ~ 11.8</span>
+          <span class="steps__s">진행 중</span>
+        </li>
+        <li class="steps__item">
+          <span class="steps__k">선정자 보고</span>
+          <span class="steps__v">11.14(토) 회원의날</span>
+          <span class="steps__s">예정</span>
+        </li>
+      </ol>
+    </section>
+
+
+    <div class="page__foot">
+      <img src="logo.jpg" alt="도요새 로고" class="page__foot-logo">
+      <img src="logo.jpg" alt="도요새 로고" class="page__foot-logo">
+    </div>
+  </div>
+</article>
+
+<!-- ============ 페이지 03 : 회원의날 진행계획 + 마감 ============ -->
+<article class="page">
+  <div class="page__top page__top--bare"></div>
+
+  <div class="page__body">
+    <h2 class="h-lead"><span class="mark mark--right">2026 회원의날</span>에<br class="br-mo"> 초대합니다!</h2>
+
+    <section class="news">
+      <div class="prose">
+        <p>새로운 출발을 함께해 주신 회원 여러분과 2026년을 갈무리하며, 한 해의 이야기와 희망을 나누는 자리를 마련했습니다. <span class="pnote">(이미지를 클릭하면 신청 페이지로 이동합니다)</span></p>
+      </div>
+      <!-- 신청 페이지 주소 받으면 href 교체 -->
+      <a class="notice" href="#신청페이지" target="_blank" rel="noopener">
+        <img src="webposter.jpg" alt="박원순혁신재단 2026 회원의날 이야기 포트럭 파티 웹자보 — 2026년 11월 14일(토) 15:00~18:00, 푸르메재단 4층, 작은마켓은 2시부터">
+      </a>
+      <div class="btnrow">
+        <a class="linkbtn linkbtn--slim" href="#신청페이지" target="_blank" rel="noopener">회원의날 참석 신청하기 <i>&rarr;</i></a>
       </div>
     </section>
 
-    <!-- 2페이지 하단 로고 2개 배치 -->
-    <div class="page__foot">
-      <img src="logo.jpg" alt="도요새 로고" class="page__foot-logo">
-      <img src="logo.jpg" alt="도요새 로고" class="page__foot-logo">
-    </div>
-  </div>
-</article>
 
-<!-- ============ 페이지 03 : 재단 소식 - 회원의날 ============ -->
-<article class="page">
-  <div class="page__top page__top--bare"></div>
+    <!-- 진행 순서 (6주기 추도식 리플릿 식순 디자인 참고) -->
+    <section class="program">
+      <span class="program__eyebrow">PROGRAM</span>
+      <h3 class="program__title">회원의날 진행 순서</h3>
 
-  <div class="page__body">
-    <figure class="photo rise">
-      <img src="photo.jpg" alt="2026 회원의날 행사장에서 회원들이 손하트를 만들며 함께 찍은 단체사진">
-    </figure>
-
-    <div class="split">
-      <div>
-        <h2 class="h-lead">'2026 회원의날' 개최</h2>
-        <div class="facts">
-          <div class="facts__row"><div class="facts__k">일시</div><div class="facts__v"><span class="hl">2026년 11월 14일(토) <br class="br-m">오후 3시 ~ 6시</span><small class="meal">식사 시간 포함</small></div></div>
-          <div class="facts__row"><div class="facts__k">장소</div><div class="facts__v">푸르메재단 강당<small>서울시 종로구 자하문로 89, 4층</small></div></div>
-          <div class="facts__row"><div class="facts__k">내용</div><div class="facts__v">재단 설립 및 운영 경과 보고<small>부대행사 예정</small></div></div>
+      <div class="program__part">
+        <div class="program__bar">
+          <span class="program__no">1부</span>
+          <span class="program__name">재단 한해살이 이야기</span>
+          <span class="program__time">15:00 — 15:45</span>
         </div>
-      </div>
-      <div class="aside">
-        <p>'회원의날'은 재단이 올해 어떤 일을 했고, 앞으로 무엇을 할지 회원 여러분께 보고드리고 의견을 듣는 자리입니다. 설립 이후의 운영 상황과 함께 하반기에 시작한 사업들을 공유합니다.</p>
-        <p><span class="ul">참가 신청 등 자세한 것은 10월에 다시 안내하겠습니다.</span></p>
-      </div>
-    </div>
-
-
-    <!-- 3페이지 하단 로고 3개 배치 -->
-    <div class="page__foot">
-      <img src="logo.jpg" alt="도요새 로고" class="page__foot-logo">
-      <img src="logo.jpg" alt="도요새 로고" class="page__foot-logo">
-      <img src="logo.jpg" alt="도요새 로고" class="page__foot-logo">
-    </div>
-  </div>
-</article>
-
-<!-- ============ 페이지 04 : 회원확대 캠페인 + 마감 ============ -->
-<article class="page">
-  <div class="page__top page__top--bare"></div>
-
-  <div class="page__body">
-    <h2 class="h-lead">회원이 <span class="circle">103분</span> 늘었습니다</h2>
-    <div class="prose">
-      <p style="max-width:80ch">올해 3월, 박원순혁신재단이 비영리법인으로 정식 등록된 후 2026년 5월 13일부터 7월 31일까지 회원확대 캠페인을 진행했습니다. 많은 분들께서 도와주신 덕분에 이 기간에만 103분께서 신규 가입하셨습니다. 모두 회원 여러분 덕분입니다. 고맙습니다.</p>
-    </div>
-
-    <section class="news rise" style="margin-top:34px">
-      <div class="callout">
-        <ul class="callout__list">
-          <li>회원 여러분의 참여가 박원순의 가치를 널리 확산하는 토대가 됩니다.</li>
-          <li>연락처가 바뀌었다면 사무처로 알려주세요.
-            <span class="callout__contact">(문자메시지 <a href="sms:+821073970109">010-7397-0109</a> · 이메일 <a href="mailto:sojang@parkwonsoon.org">sojang@parkwonsoon.org</a>)</span>
-          </li>
+        <ul class="program__list">
+          <li>사전 영상</li>
+          <li>참석자 소개</li>
+          <li>환영 인사 — 이사장</li>
+          <li>활동 보고 — 사무처장</li>
+          <li>특별 보고 — 상임이사</li>
+          <li>특별 감사 — 이사장</li>
         </ul>
       </div>
-      <div class="give">
-        <a class="give__btn" href="https://online.mrm.or.kr/IvNbY4b" target="_blank" rel="noopener">박원순혁신재단 가입하기 <i>&rarr;</i></a>
+
+      <div class="program__part">
+        <div class="program__bar">
+          <span class="program__no">2부</span>
+          <span class="program__name">회원 이야기 포트럭 파티</span>
+          <span class="program__time">16:00 — 18:00</span>
+        </div>
+        <ul class="program__list">
+          <li>축하 공연</li>
+          <li>퀴즈 — 십자말풀이</li>
+          <li>이야기 나눔</li>
+          <li>물품 경매 + 경품 추첨</li>
+          <li>식사와 친교의 시간</li>
+        </ul>
+      </div>
+
+      <div class="program__part">
+        <div class="program__bar">
+          <span class="program__no">부대</span>
+          <span class="program__name">작은마켓</span>
+          <span class="program__time">14:00 —</span>
+        </div>
+        <ul class="program__list">
+          <li>회원들이 기부한 물품 판매</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="news rise" style="margin-top:34px;border-top:0;padding-top:0">
+      <div class="give" style="margin-top:0">
+        <a class="give__btn" href="https://online.mrm.or.kr/IvNbY4b" target="_blank" rel="noopener">박원순혁신재단 후원하기 <i>&rarr;</i></a>
       </div>
       <div class="footer">
         <p class="footer__org">(사)박원순혁신재단</p>
         <p>서울 종로구 새문안로 69 구세군회관 504호</p>
         <p><a href="https://www.parkwonsoon.org" target="_blank" rel="noopener">www.parkwonsoon.org</a> / <a href="sms:+821073970109">010-7397-0109</a> / <a href="mailto:sojang@parkwonsoon.org">sojang@parkwonsoon.org</a></p>
-        <p>후원계좌: <button type="button" class="copybtn" data-copy="203-910058-08904">하나은행 203-910058-08904</button> (사단법인 박원순혁신재단)</p>
+        <p>후원계좌: 하나은행 <button type="button" class="copybtn" data-copy="203-910058-08904">203-910058-08904</button> (사단법인 박원순혁신재단)</p>
       </div>
     </section>
 
-    <!-- 4페이지 하단 로고 4개 배치 -->
     <div class="page__foot">
-      <img src="logo.jpg" alt="도요새 로고" class="page__foot-logo">
       <img src="logo.jpg" alt="도요새 로고" class="page__foot-logo">
       <img src="logo.jpg" alt="도요새 로고" class="page__foot-logo">
       <img src="logo.jpg" alt="도요새 로고" class="page__foot-logo">
     </div>
   </div>
 </article>
+
 
 <script>
 (function(){
@@ -619,8 +922,10 @@
 
   function paused(state){ wrap.classList.toggle('is-paused', !!state); }
 
+  var wantSound = false;
+
   function tryPlay(){
-    video.muted = true;
+    if (!wantSound) video.muted = true;
     var r;
     try { r = video.play(); } catch(e){ paused(true); return; }
     if (r && r.then){ r.then(function(){ paused(false); }).catch(function(){ paused(true); }); }
@@ -675,12 +980,26 @@
     if (!reduce && !autoPaused) paused(true);
   });
   video.addEventListener('play', function(){ paused(false); });
+
+  /* 소리 켜기 / 끄기 */
+  var soundBtn = document.getElementById('coverSound');
+  if (soundBtn){
+    soundBtn.addEventListener('click', function(e){
+      e.stopPropagation(); e.preventDefault();
+      wantSound = video.muted;          /* 지금 음소거면 소리를 켠다 */
+      video.muted = !wantSound;
+      try { video.volume = 1; } catch(err){}
+      soundBtn.textContent = wantSound ? '소리 끄기' : '소리 켜기';
+      soundBtn.setAttribute('aria-label', soundBtn.textContent);
+      /* 이미 끝났거나 멈춰 있으면 처음부터 다시 재생 */
+      if (wantSound && (video.paused || video.ended)) replay();
+    });
+  }
   video.addEventListener('error', function(){ paused(true); });
 })();
 </script>
 
 <!-- 방문 통계 (GoatCounter) -->
-<script data-goatcounter="https://parkwonsoon.goatcounter.com/count"
-        async src="//gc.zgo.at/count.js"></script>
+<script data-goatcounter="https://parkwonsoon.goatcounter.com/count"         async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>
